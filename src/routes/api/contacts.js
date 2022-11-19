@@ -51,5 +51,4 @@ router.put("/:contactId", updateContactValidation, async (req, res, next) => {
   res.status(200).json(updatedContact);
 });
 
-
 module.exports = router;
