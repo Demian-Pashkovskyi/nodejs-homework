@@ -8,7 +8,7 @@ const uriDb = process.env.DB_HOST;
 
 (async () => {
   try {
-    await mongoose.connect(uriDb);
+    await mongoose.connect(uriDb, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("Database connection successful");
 
     app.listen(PORT, () => {
